@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--        This is the line which tells the spring framework about where to look for all the @Component annotations-->
+    <!--        to create beans out of it. It goes to every level down the hierarchy from base-package to find all beans-->
+    <context:component-scan base-package="com.yugal">
+    </context:component-scan>
+
+    <!--        These beans are created in the application context-->
+    <bean class="com.yugal.implementation.Coder" id="coder">
+    </bean>
+    <bean class="com.yugal.implementation.TeamLead" id="teamlead">
+    </bean>
+
+</beans>
